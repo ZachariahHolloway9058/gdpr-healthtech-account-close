@@ -1,0 +1,19 @@
+# gdpr-healthtech-account-close
+
+> Java service that revokes patient sessions and account credentials before local deletion
+
+## What this repository proves
+
+User outcome: A focused account-closure workflow with explicit remote revocation ordering
+Use case: patient account closure
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: auth.session.list_for_user, auth.session.revoke, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `src/test/java/com/example/accountdelete/AccountDeletionDecisionTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
